@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function redirect() {
+        var youtubeURL = document.getElementById("youtube-url").value;
+        var youtubeID = youtubeURL.substring(youtubeURL.indexOf('=') + 1);
+        //alert(youtubeID);
+        window.location.replace("https://scratch.mit.edu/discuss/youtube/" + youtubeID)
+      }
+    </script>
+    <title>scratch-youtube-downloader</title>
+  </head>
+  <body>
+    <center>
+      <h1>
+        scratch-youtube-downloader
+      </h1>
+      <p>
+        Enter basic youtube url bellow...
+      </p>
+      <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <button type="submit" id="go" form="youtube-url" onclick="redirect()">Go</button>
+    </center>
+  </body>
+</html>
